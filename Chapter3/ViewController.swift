@@ -18,16 +18,15 @@ class ViewController: UIViewController {
     @IBAction func showMessage(sender:  UIButton) {
         
         // Creating a dictionary for the emoji
-        let emojiDict = ["😱": "Shock", "😤": "Fumming", "🤔": "Interesting", "🙄": "Obviously" ]
+        var emojiDict = ["😯": "Shock", " 🤔": "Think", "😩": "Spare Me", "🙄": "Obviously"]
         
         // Sender Button
         let selectdButton = sender
         
-        if let wordToLookup = selectdButton.titleLabel?.text {
+        if let wordToLookup = selectdButton.titleLabel?.text{
             
             let meaning = emojiDict[wordToLookup]
           
-            
             let alertController = UIAlertController(title: "Meaning", message: meaning, preferredStyle: UIAlertController.Style.alert)
             
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
